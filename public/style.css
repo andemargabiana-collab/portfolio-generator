@@ -1,24 +1,40 @@
-/* public/style.css - minimal styles for three templates */
-body { font-family: Arial, sans-serif; margin:0; padding:0; color:#222; }
-.container { padding:20px; max-width:1000px; margin:0 auto; }
-.nav { background:#f4f4f4; padding:10px 20px; }
-.nav a { margin-right:10px; }
-.btn { background:#007bff; color:white; padding:8px 12px; text-decoration:none; border-radius:4px; }
-.btn.danger { background:#c0392b; }
+/* public/style.css - minimal styles for DevFolio */
+:root{
+  --primary:#0b74de;
+  --accent:#ff7a59;
+  --muted:#6b7280;
+  --max-width:1100px;
+}
+body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; padding:0; color:#111; background:#f8fafc; }
+.container { padding:20px; max-width:var(--max-width); margin:0 auto; }
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.site-title{margin:0;font-size:26px}
+.site-title a{color:var(--primary);text-decoration:none}
+.nav a{margin-left:14px;color:#111;text-decoration:none}
+.site-header{background:#fff;border-bottom:1px solid #eef2f7}
+.hero{padding:36px;background:linear-gradient(90deg, rgba(11,116,222,0.08), rgba(255,122,89,0.04));border-radius:8px;margin-top:18px}
+.hero h2{margin:0 0 8px 0;font-size:28px}
+.hero p{margin:0 0 16px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;border-radius:6px;text-decoration:none;color:#fff}
+.btn.primary{background:var(--primary)}
+.btn.secondary{background:#6b7280}
+.overview, .requirements{margin-top:20px;background:#fff;padding:16px;border-radius:8px;border:1px solid #eef2f7}
+.footer{margin-top:28px;text-align:center;color:var(--muted);padding:18px}
+
+/* Cards and templates keep previous rules but tuned for DevFolio */
 .list { list-style:none; padding:0; }
-.card { border:1px solid #ddd; padding:12px; margin-bottom:12px; border-radius:6px; }
+.card { border:1px solid #e6eef7; padding:12px; margin-bottom:12px; border-radius:8px; background:#fff }
 .avatar { width:100px; height:100px; border-radius:50%; object-fit:cover; }
-.footer { text-align:center; padding:20px; color:#666; }
 
 /* Simple template */
 .template.simple .simple-header { text-align:center; padding:20px; }
-.template.simple section { padding:10px 0; border-top:1px solid #eee }
+.template.simple section { padding:10px 0; border-top:1px solid #f1f5f9 }
 
 /* Modern template */
 .template.modern .modern-grid { display:flex; gap:20px; }
-.modern-sidebar { width:260px; background:#f9f9f9; padding:20px; border-radius:8px; }
+.modern-sidebar { width:260px; background:#f9fafe; padding:20px; border-radius:8px; }
 .modern-main { flex:1; }
-.card { background:white; padding:12px; border:1px solid #eee; border-radius:6px; }
+.card { background:white; padding:12px; border:1px solid #eef2f7; border-radius:6px; }
 
 /* Creative */
 .template.creative .creative-top { display:flex; gap:16px; align-items:center; background:linear-gradient(90deg,#ff8a00, #e52e71); color:white; padding:20px; border-radius:8px; }

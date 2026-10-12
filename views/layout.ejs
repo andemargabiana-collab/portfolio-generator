@@ -3,20 +3,25 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Portfolio Generator</title>
+    <title>DevFolio</title>
     <link rel="stylesheet" href="/public/style.css">
   </head>
   <body>
-    <nav class="nav">
-      <a href="/">Home</a> |
-      <a href="/portfolios/create">Create Portfolio</a> |
-      <a href="/portfolios">Manage Portfolios</a>
-    </nav>
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-title"><a href="/">DevFolio</a></h1>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/portfolios/create">Create Portfolio</a>
+          <a href="/portfolios">Manage Portfolios</a>
+        </nav>
+      </div>
+    </header>
     <main class="container">
       <%- body %>
     </main>
     <footer class="footer">
-      Portfolio Generator • minimal example
+      DevFolio • Portfolio Template Generator
     </footer>
   </body>
 </html>
