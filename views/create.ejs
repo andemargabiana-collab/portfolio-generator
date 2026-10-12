@@ -1,0 +1,38 @@
+<% layout('layout') -%>
+<h2>Create Portfolio</h2>
+<form action="/portfolios" method="post">
+  <label>Full Name <input name="fullName" required></label>
+  <label>Profile Image URL <input name="profileImageUrl" placeholder="https://..."></label>
+  <label>Email <input name="email"></label>
+  <label>Contact Number <input name="contactNumber"></label>
+  <label>Address <input name="address"></label>
+  <label>About Me <textarea name="aboutMe"></textarea></label>
+
+  <h3>Education (comma-separated entries or leave blank)</h3>
+  <label>Educations (Simple CSV): <input name="educations" placeholder="School1 - Degree, School2 - Degree"></label>
+
+  <h3>Skills (comma separated)</h3>
+  <label>Skills <input name="skills" placeholder="HTML, CSS, JavaScript"></label>
+
+  <h3>Projects (add up to 3)</h3>
+  <label>Title <input name="projectTitle"></label>
+  <label>Description <input name="projectDesc"></label>
+  <label>Link <input name="projectLink"></label>
+
+  <h3>Experience</h3>
+  <label>Company <input name="expCompany"></label>
+  <label>Position <input name="expPosition"></label>
+  <label>Details <input name="expDetails"></label>
+
+  <h3>Social Links</h3>
+  <label>Platform <input name="socialPlatform" placeholder="LinkedIn"></label>
+  <label>URL <input name="socialUrl" placeholder="https://..."></label>
+
+  <h3>Choose Template</h3>
+  <label><input type="radio" name="templateChoice" value="simple" checked> Simple</label>
+  <label><input type="radio" name="templateChoice" value="modern"> Modern</label>
+  <label><input type="radio" name="templateChoice" value="creative"> Creative</label>
+
+  <button class="btn" type="submit">Save & Preview</button>
+</form>
+<p>Tip: To add multiple projects/experience/socials, submit again with more fields (this simple form demo doesn't have dynamic add buttons). You can extend it later.</p>

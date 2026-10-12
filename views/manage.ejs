@@ -1,0 +1,23 @@
+<% layout('layout') -%>
+<h2>Manage Portfolios</h2>
+<% if (portfolios.length === 0) { %>
+  <p>No portfolios yet. <a href="/portfolios/create">Create one</a>.</p>
+<% } else { %>
+  <ul class="list">
+  <% portfolios.forEach(function(p){ %>
+    <li class="card">
+      <h3><%= p.fullName %></h3>
+      <p><%= p.aboutMe ? (p.aboutMe.substring(0,120) + '...') : '' %></p>
+      <small>Template: <%= p.templateChoice %></small>
+      <div class="actions">
+        <a class="btn" href="/p/<%= p._id %>">Public View</a>
+        <a class="btn" href="/portfolios/<%= p._id %>/preview">Preview</a>
+        <a class="btn" href="/portfolios/<%= p._id %>/edit">Edit</a>
+        <form style="display:inline" action="/portfolios/<%= p._id %>/delete" method="post" onsubmit="return confirm('Delete?')">
+          <button class="btn danger" type="submit">Delete</button>
+        </form>
+      </div>
+    </li>
+  <% }) %>
+  </ul>
+<% } %>

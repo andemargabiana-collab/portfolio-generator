@@ -1,0 +1,35 @@
+<div class="template creative">
+  <div class="creative-top">
+    <img class="avatar" src="<%= portfolio.profileImageUrl || '/public/default-avatar.png' %>">
+    <div>
+      <h1><%= portfolio.fullName %></h1>
+      <p><%= portfolio.address %></p>
+    </div>
+  </div>
+  <div class="creative-body">
+    <section class="left">
+      <h3>Experience</h3>
+      <% portfolio.experiences.forEach(function(e){ %>
+        <div class="exp">
+          <strong><%= e.position %></strong> at <em><%= e.company %></em>
+          <p><%= e.details %></p>
+        </div>
+      <% }) %>
+    </section>
+    <section class="right">
+      <h3>Projects</h3>
+      <% portfolio.projects.forEach(function(pj){ %>
+        <div class="proj-creative">
+          <h4><%= pj.title %></h4>
+          <p><%= pj.description %></p>
+        </div>
+      <% }) %>
+      <h3>Social</h3>
+      <ul>
+      <% portfolio.socialLinks.forEach(function(s){ %>
+        <li><a href="<%= s.url %>"><%= s.platform %></a></li>
+      <% }) %>
+      </ul>
+    </section>
+  </div>
+</div>

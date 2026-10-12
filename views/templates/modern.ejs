@@ -1,0 +1,28 @@
+<div class="template modern">
+  <div class="modern-grid">
+    <aside class="modern-sidebar">
+      <img class="avatar" src="<%= portfolio.profileImageUrl || '/public/default-avatar.png' %>">
+      <h2><%= portfolio.fullName %></h2>
+      <p><%= portfolio.contactNumber %></p>
+      <p><%= portfolio.email %></p>
+      <h4>Skills</h4>
+      <ul>
+        <% portfolio.skills.forEach(function(s){ %><li><%= s %></li><% }) %>
+      </ul>
+    </aside>
+    <main class="modern-main">
+      <h3>About</h3>
+      <p><%= portfolio.aboutMe %></p>
+      <h3>Projects</h3>
+      <div class="cards">
+        <% portfolio.projects.forEach(function(proj){ %>
+          <div class="card">
+            <h4><%= proj.title %></h4>
+            <p><%= proj.description %></p>
+            <% if (proj.link) { %><a href="<%= proj.link %>">View</a><% } %>
+          </div>
+        <% }) %>
+      </div>
+    </main>
+  </div>
+</div>

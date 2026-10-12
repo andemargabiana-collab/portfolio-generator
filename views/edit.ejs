@@ -1,0 +1,19 @@
+<% layout('layout') -%>
+<h2>Edit Portfolio</h2>
+<form action="/portfolios/<%= portfolio._id %>?_method=PUT" method="post">
+  <label>Full Name <input name="fullName" value="<%= portfolio.fullName %>"></label>
+  <label>Profile Image URL <input name="profileImageUrl" value="<%= portfolio.profileImageUrl %>"></label>
+  <label>Email <input name="email" value="<%= portfolio.email %>"></label>
+  <label>Contact Number <input name="contactNumber" value="<%= portfolio.contactNumber %>"></label>
+  <label>Address <input name="address" value="<%= portfolio.address %>"></label>
+  <label>About Me <textarea name="aboutMe"><%= portfolio.aboutMe %></textarea></label>
+
+  <label>Skills (comma separated) <input name="skills" value="<%= portfolio.skills.join(', ') %>"></label>
+
+  <h3>Choose Template</h3>
+  <label><input type="radio" name="templateChoice" value="simple" <%= portfolio.templateChoice==='simple'?'checked':'' %>> Simple</label>
+  <label><input type="radio" name="templateChoice" value="modern" <%= portfolio.templateChoice==='modern'?'checked':'' %>> Modern</label>
+  <label><input type="radio" name="templateChoice" value="creative" <%= portfolio.templateChoice==='creative'?'checked':'' %>> Creative</label>
+
+  <button class="btn" type="submit">Save</button>
+</form>

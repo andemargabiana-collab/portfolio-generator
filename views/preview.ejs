@@ -1,0 +1,10 @@
+<% layout('layout') -%>
+<h2>Portfolio Preview: <%= portfolio.fullName %></h2>
+<!-- include the chosen template partial -->
+<%- include('templates/' + (portfolio.templateChoice || 'simple'), { portfolio: portfolio }) %>
+<hr>
+<p>
+  <a class="btn" href="/portfolios/<%= portfolio._id %>/edit">Edit</a>
+  <a class="btn" href="/portfolios">Back to Manage</a>
+  <a class="btn" href="/p/<%= portfolio._id %>">Public View Link</a>
+</p>

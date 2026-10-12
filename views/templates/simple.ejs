@@ -1,0 +1,25 @@
+<div class="template simple">
+  <header class="simple-header">
+    <img class="avatar" src="<%= portfolio.profileImageUrl || '/public/default-avatar.png' %>" alt="">
+    <h1><%= portfolio.fullName %></h1>
+    <p><%= portfolio.aboutMe %></p>
+  </header>
+  <section>
+    <h3>Contact</h3>
+    <p>Email: <%= portfolio.email %> | Phone: <%= portfolio.contactNumber %></p>
+  </section>
+  <section>
+    <h3>Skills</h3>
+    <p><%= portfolio.skills.join(', ') %></p>
+  </section>
+  <section>
+    <h3>Projects</h3>
+    <% portfolio.projects.forEach(function(proj){ %>
+      <div class="project">
+        <h4><%= proj.title %></h4>
+        <p><%= proj.description %></p>
+        <% if (proj.link) { %><p><a href="<%= proj.link %>"><%= proj.link %></a></p><% } %>
+      </div>
+    <% }) %>
+  </section>
+</div>

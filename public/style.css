@@ -1,0 +1,27 @@
+/* public/style.css - minimal styles for three templates */
+body { font-family: Arial, sans-serif; margin:0; padding:0; color:#222; }
+.container { padding:20px; max-width:1000px; margin:0 auto; }
+.nav { background:#f4f4f4; padding:10px 20px; }
+.nav a { margin-right:10px; }
+.btn { background:#007bff; color:white; padding:8px 12px; text-decoration:none; border-radius:4px; }
+.btn.danger { background:#c0392b; }
+.list { list-style:none; padding:0; }
+.card { border:1px solid #ddd; padding:12px; margin-bottom:12px; border-radius:6px; }
+.avatar { width:100px; height:100px; border-radius:50%; object-fit:cover; }
+.footer { text-align:center; padding:20px; color:#666; }
+
+/* Simple template */
+.template.simple .simple-header { text-align:center; padding:20px; }
+.template.simple section { padding:10px 0; border-top:1px solid #eee }
+
+/* Modern template */
+.template.modern .modern-grid { display:flex; gap:20px; }
+.modern-sidebar { width:260px; background:#f9f9f9; padding:20px; border-radius:8px; }
+.modern-main { flex:1; }
+.card { background:white; padding:12px; border:1px solid #eee; border-radius:6px; }
+
+/* Creative */
+.template.creative .creative-top { display:flex; gap:16px; align-items:center; background:linear-gradient(90deg,#ff8a00, #e52e71); color:white; padding:20px; border-radius:8px; }
+.template.creative .creative-body { display:flex; gap:20px; margin-top:16px; }
+.template.creative .left { width:45%; }
+.template.creative .right { width:55%; background:#fff7f7; padding:12px; border-radius:6px; }
